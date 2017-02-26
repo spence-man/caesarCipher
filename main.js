@@ -3,7 +3,7 @@ console.log("main js is running");
 
 function encrypt() {
   var encryptText = document.getElementById("encrypt1").value;
-  document.getElementById("answer1").innerHTML = encryptText;
+  document.getElementById("encryptAnswer").innerHTML = encryptText;
   var ekey = parseInt(document.getElementById("ekey").value);
   console.log(ekey);
   console.log(encryptText);
@@ -15,7 +15,7 @@ function encrypt() {
 
 function decrypt() {
   var decryptText = document.getElementById("encrypt2").value;
-  document.getElementById("ans2").innerHTML = decryptText;
+  document.getElementById("decryptAnswer").innerHTML = decryptText;
   var dkey = parseInt(document.getElementById("dkey").value);
   console.log(dkey);
   init(dkey,decryptText);
@@ -49,9 +49,9 @@ caesarCipher = function(offset,string) {
 
 
   if(document.getElementById("encrypt1").value){
-    document.getElementById("answer1").innerHTML = arrayWords.join(" ");
+    document.getElementById("encryptAnswer").innerHTML = arrayWords.join(" ");
   } else {
-    document.getElementById("ans1").innerHTML = arrayWords.join(" ");
+    document.getElementById("decryptAnswer").innerHTML = arrayWords.join(" ");
   }
 	console.log(arrayWords.join(" "));
 	return arrayWords.join(" ");
